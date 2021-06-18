@@ -9,7 +9,7 @@ namespace CommandPattern
     {
         public Task<bool> Handle(StockCommand request, CancellationToken cancellationToken)
         {
-            Console.WriteLine("StockCommandHandler received command");
+            Console.WriteLine("the StockCommand has been caught by the StockCommandHandler");
             return Task.FromResult(true);
         }
     }

@@ -5,12 +5,11 @@ using System.Text;
 
 namespace CommandPattern
 {
-    public class BondCommand : AbstractTradeCommand
+    public class BondCommand : AbstractCommand
     {
-
         public override List<string> SubscribeISINs()
         {
-            return new List<string>() { ISINPattern.OTCBond };
+            return new List<string>() { "IRB3", "IRBE", };
         }
     }
 }

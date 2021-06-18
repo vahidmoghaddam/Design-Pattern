@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace CommandPattern
 {
-    public class BondCommandHandler : IRequestHandler<BondCommand,bool>
-    {
-        public Task<bool> Handle(BondCommand request, CancellationToken cancellationToken)
+        public class BondCommandHandler : IRequestHandler<BondCommand,bool>
         {
-            Console.WriteLine("BondCommandHandler received command");
-            return Task.FromResult(true); 
+            public Task<bool> Handle(BondCommand request, CancellationToken cancellationToken)
+            {
+                Console.WriteLine("the BondCommand has been caught by the BondCommandHandler");
+                return Task.FromResult(true); 
+            }
         }
-    }
 }
